@@ -1,4 +1,4 @@
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +10,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
     <script
       crossorigin="anonymous"
@@ -29,387 +32,502 @@
   </head>
 
   <body class="container py-5">
-    <a href="#main" class="skiplink"> aller directement au contenu </a>
+    <section>
+      <h1>Simulation de prêt immobilier</h1>
+      <p>
+        Bienvenue sur le simulateur de financement de Atecna Banque. Obtenez une
+        proposition en 48h et un rendez-vous avec un de nos conseillers.
+      </p>
+      <p>
+        <strong>
+          Merci de remplir le formulaire suivant pour la création de votre
+          dossier:
+        </strong>
+      </p>
+    </section>
 
-    <main id="main">
-      <section>
-        <h1>Simulation de prêt immobilier</h1>
-        <p>
-          Bienvenue sur le simulateur de financement de Atecna Banque. Obtenez une proposition en 48h et un rendez-vous
-          avec un de nos conseillers.
-        </p>
-        <p>
-          <strong> Merci de remplir le formulaire suivant pour la création de votre dossier: </strong>
-        </p>
-      </section>
-  
-      <small>Les champs marqués d'une * sont requis.</small>
-  
-  
-      <form style="max-width: 68rem; margin: 3rem auto" class="needs-validation" novalidate>
-        <div class="button-inputs row g-4 mb-4">
-          <!-- Situation -->
-          <div role="radiogroup">
-            <div class="col-md-12">
-              <label for="situation" class="form-label"> Vous souhaitez : *</label>
-              <input type="hidden" name="situation" required />
-            </div>
-    
-            <div class="col-lg-3 col-sm-6">
-              <input name="project" type="radio" class="btn-check" id="btn-check-1" autocomplete="off" required>
-              <label class="btn btn-primary" for="btn-check-1">Acheter un bien</label>
-            </div>
-          </div>
-  
-          <div class="col-lg-3 col-sm-6">
-            <input name="project" type="radio" class="btn-check" id="btn-check-2" autocomplete="off">
-            <label class="btn btn-primary" for="btn-check-2">Faire construire</label>
-          </div>
-  
-          <div class="col-lg-3 col-sm-6">
-            <button type="button" class="btn btn-lg btn-outline-dark w-100 d-flex align-items-center column-gap-3">
-              <i class="bi bi-hammer"></i>
-              <span>Faire des travaux</span>
-            </button>
-          </div>
-  
-          <div class="col-lg-3 col-sm-6">
-            <button type="button" class="btn btn-lg btn-outline-dark w-100 d-flex align-items-center column-gap-3">
-              <i class="bi bi-piggy-bank"></i>
-              <span>Rachat de crédit</span>
-            </button>
-          </div>
+    <form
+      style="max-width: 68rem; margin: 3rem auto"
+      class="needs-validation"
+      novalidate
+    >
+      <div class="button-inputs row g-4 mb-4">
+        <!-- Situation -->
+        <div class="col-md-12">
+          <label for="situation" class="form-label"> Vous souhaitez : *</label>
+          <input type="hidden" name="situation" required />
         </div>
-  
-        <div class="button-inputs row g-4 mb-4">
-          <!-- Projet -->
-          <div class="col-md-12">
-            <label for="project" class="form-label"> Votre projet porte sur : * </label>
-            <input type="hidden" name="project" />
-          </div>
-  
-          <div class="col-lg-4 col-sm-12">
-            <button type="button" class="btn btn-lg btn-outline-dark w-100 d-flex align-items-center column-gap-2">
-              <i class="bi bi-house-heart"></i>
-              <span>Votre résidence principale</span>
-            </button>
-          </div>
-  
-          <div class="col-lg-4 col-sm-12">
-            <button type="button" class="btn btn-lg btn-outline-dark w-100 d-flex align-items-center column-gap-2">
-              <i class="bi bi-signpost-split"></i>
-              <span>Votre résidence secondaire</span>
-            </button>
-          </div>
-  
-          <div class="col-lg-4 col-sm-12">
-            <button type="button" class="btn btn-lg btn-outline-dark w-100 d-flex align-items-center column-gap-2">
-              <i class="bi bi-cash-coin"></i>
-              <span>Un investissement locatif</span>
-            </button>
-          </div>
-        </div>
-  
-        <hr class="my-5" />
-  
-  
-       <fieldset>
-        <legend>Vous</legend>
-        <div class="row g-4 mb-4">
-          <!-- Civilité -->
-          <div class="col-md-2 mt-5">
-            <label for="gender" class="form-label">Civilité *</label>
-            <select class="form-select form-select-lg mt-2" required name="gender">
-              <option value="0" disabled selected></option>
-              <option value="1">Homme</option>
-              <option value="2">Femme</option>
-              <option value="3">Autre</option>
-              <option value="4">Ne se prononce pas</option>
-            </select>
-          </div>
-  
-          <!-- Nom -->
-          <div class="col-md-5">
-            <label for="lastname" class="form-label">Nom *</label>
-            <input type="text" class="form-control form-control-lg" id="lastname" required aria-describedby="lastname-error" aria-invalid="true"/>
-            <div class="invalid-feedback" id="lastname-error">Le champs est incorrect.</div>
-          </div>
-  
-          <!-- Prénom -->
-          <div class="col-md-5">
-            <label for="firstname" class="form-label">Prénom *</label>
-            <input type="text" class="form-control form-control-lg" id="firstname" required />
-            <div class="invalid-feedback">Le champs est incorrect.</div>
-          </div>
-        </div>
-       </fieldset>
-  
-  
-        <div class="row g-4 mb-4">
-          <!-- Civilité -->
-          <fieldset>
-            <legend>Votre co-emprunteur</legend>
-  
-            <div class="col-md-2 mt-5">
-              <select class="form-select form-select-lg mt-2" required>
-                <option selected disabled>Civilité</option>
-                <option value="1">Homme</option>
-                <option value="2">Femme</option>
-                <option value="3">Autre</option>
-                <option value="4">Ne se prononce pas</option>
-              </select>
-            </div>
-    
-            <!-- Nom -->
-            <div class="col-md-5">
-              <label for="co-lastname" class="form-label">Nom</label>
-              <input type="text" class="form-control form-control-lg" id="co-lastname" required />
-              <div class="invalid-feedback">Le champs est incorrect.</div>
-            </div>
-    
-            <!-- Prénom -->
-            <div class="col-md-5">
-              <label for="co-firstname" class="form-label">Prénom</label>
-              <input type="text" class="form-control form-control-lg" id="co-firstname" required />
-              <div class="invalid-feedback">Le champs est incorrect.</div>
-            </div>
-          </div>
-    
-          </fieldset>
-        <hr class="my-5" />
-  
-        <strong class="d-block mb-3">Votre adresse</strong>
-  
-        <div class="row g-4 mb-4">
-          <!-- Numéro -->
-          <div class="col-md-3">
-            <label for="number" class="form-label">Numéro dans la voie *</label>
-            <input type="text" class="form-control form-control-lg" id="number" required />
-            <div class="invalid-feedback">Le champs est incorrect.</div>
-          </div>
-  
-          <!-- Numéro -->
-          <div class="col-md-3">
-            <label for="street-type" class="form-label">Type de voie *</label>
-            <select class="form-select form-select-lg" id="street-type" required>
-              <option selected disabled></option>
-              <option value="1">Rue</option>
-              <option value="2">Allée</option>
-              <option value="3">Boulevard</option>
-              <option value="3">Sentier</option>
-              <option value="3">Avenue</option>
-            </select>
-            <div class="invalid-feedback">Le champs est incorrect.</div>
-          </div>
-  
-          <!-- Rue -->
-          <div class="col-md-6">
-            <label for="street" class="form-label">Nom de la voie <span aria-hidden>*</span></label>
-            <input type="text" class="form-control form-control-lg" id="street" required />
-            <div class="invalid-feedback">Le champs est incorrect.</div>
-          </div>
-  
-          <!-- Code postal -->
-          <div class="col-md-4 mt-0">
-            <label for="postcode" class="form-label">Code postal *</label>
-            <input type="text" placeholder="Exemple 59290" class="form-control form-control-lg" id="postcode" required />
-            <div class="invalid-feedback">Le champs est incorrect.</div>
-          </div>
-  
-          <!-- Ville -->
-          <div class="col-md-8 mt-0">
-            <label for="city" class="form-label">&nbsp;</label>
-            <input type="text" placeholder="Localité *" class="form-control form-control-lg" id="city" required />
-            <div class="invalid-feedback">Le champs est incorrect.</div>
-          </div>
-  
-          <!-- Téléphone -->
-          <div class="col-md-6">
-            <label for="phone" class="form-label">Numéro de téléphone *</label>
-            <div class="input-group">
-              <span class="input-group-text">
-                <i class="bi bi-telephone-inbound-fill"></i>
-              </span>
-              <input type="text" class="form-control form-control-lg" id="phone" required  placeholder="exemple: 0620202020"/>
-              <div class="invalid-feedback">Le champs est incorrect. vous devez utiliser un numéro de téléphone comme 0620000000</div>
-            </div>
-          </div>
-  
-          <!-- Email -->
-          <div class="col-md-6">
-            <label for="email" class="form-label">Adresse email *</label>
-            <div class="input-group">
-              <span class="input-group-text">
-                <i class="bi bi-envelope-arrow-down"></i>
-              </span>
-              <input type="text" class="form-control form-control-lg" id="email" required />
-              <div class="invalid-feedback">Le champs est incorrect.</div>
-            </div>
-          </div>
-        </div>
-  
-        <hr class="my-5" />
-  
-        <strong class="d-block mb-3">Votre financement</strong>
-  
-        <div class="row g-4 mb-4">
-          <!-- Prix achat -->
-          <div class="col-md-6">
-            <label>
-              <p>
-                Quel est le prix du bien, frais d'agence inclus ?
-                <small class="d-block text-secondary">
-                  (Hors frais de notaire, ils seront calculés automatiquement.)
-                </small>
-  
-                <span class="sr-only">
-                  en Euros
-                </span>
-              </p>
-            </label>
-  
-            <div class="input-group">
-              <input
-                type="number"
-                aria-describedby="currency"
-                class="form-control form-control-lg"
-                placeholder="Exemple: 165 000"
-                min="40000"
-                max="1000000"
-                step="1000"
-                required
-              />
-              <span class="input-group-text" id="currency">€</span>
-              <div class="invalid-feedback">Le champs est incorrect.</div>
-            </div>
-          </div>
-  
-          <!-- Prix travaux -->
-          <div class="col-md-6">
-            <p>
-              Quel est le montant des travaux envisagés
-              <small class="d-block text-secondary"> &nbsp; </small>
-            </p>
-  
-            <div class="input-group">
-              <input type="number" class="form-control form-control-lg" value="0" min="0" step="1000" required />
-              <span class="input-group-text">€</span>
-              <div class="invalid-feedback">Le champs est incorrect.</div>
-            </div>
-          </div>
-  
-          <!-- Apport personnel -->
-          <div class="col-md-6">
-            <p>
-              Quel est le montant total de votre apport personnel ?
-              <small class="d-block text-secondary"> &nbsp; </small>
-            </p>
-  
-            <div class="input-group">
-              <input type="number" class="form-control form-control-lg" min="0" step="1000" required />
-              <span class="input-group-text">€</span>
-              <div class="invalid-feedback">Le champs est incorrect.</div>
-            </div>
-          </div>
-  
-          <!-- Mensualité souhaités -->
-          <div class="col-md-6">
-            <p>
-              Quelle est la mensualité envisagée ?
-              <small class="d-block text-secondary"> La durée du prêt sera calculée en fonction de cette donnée </small>
-            </p>
-  
-            <div class="input-group">
-              <input type="number" class="form-control form-control-lg" min="300" step="10" required />
-              <span class="input-group-text">€</span>
-              <div class="invalid-feedback">Le champs est incorrect.</div>
-            </div>
-          </div>
-        </div>
-  
-        <hr class="my-5" />
-  
-        <div class="row mb-4">
-          <!-- CGV -->
-          <div class="col-md-12">
-            <div class="form-check">
-              <input class="form-check-input border-dark" type="checkbox" style="scale: 0.65; cursor: pointer" required id="toto" />
-              <label for="toto">J'accepte sans réserve les conditions générales de vente consultables <a href="#">ici</a>. </label>
-              <div class="invalid-feedback">Vous devez accepter les CGV</div>
-            </div>
-          </div>
-  
-          <!-- Partners -->
-          <div class="col-md-12">
-            <div class="form-check">
-              <input class="form-check-input border-dark" type="checkbox" style="scale: 0.65; cursor: pointer" checked aria-labelledby="tata"/>
-              <label id="tata">J'accepte de recevoir des offres commerciales de nos partenaires </label>
-            </div>
-          </div>
-  
-          <details>
-            <summary>Informations légales et protection de vos données personnelles</summary>
-            <div class="mt-4">
-              <p>
-                <strong>
-                  Les simulations qui peuvent être réalisées sur ce site ne constituent pas des offres de prêts
-                  immobiliers.
-                </strong>
-              </p>
-              <p>
-                L'acceptation finale de votre demande de prêt reste soumise à l'accord de votre Caisse régionale de
-                Crédit Agricole, prêteur.
-              </p>
-              <p>
-                Si le prêt concerne l'acquisition ou la construction d'un logement, une acquisition et des travaux
-                simultanément ou des travaux garantis par une hypothèque ou une sûreté comparable, le prêt prend la
-                forme d'un prêt immobilier. Vous disposez d'un délai de réflexion de 10 jours pour accepter l'offre de
-                prêt. La réalisation de la vente est subordonnée à l'obtention du prêt. Si celui-ci n'est pas obtenu, le
-                vendeur doit vous rembourser les sommes versées. Si le prêt n'est pas garanti par une hypothèque ou une
-                sûreté comparable et qu'il est destiné à financer uniquement des travaux, le prêt prend la forme d'un
-                prêt à la consommation. Vous disposez d'un délai légal de rétractation de 14 jours calendaires révolus.
-              </p>
-              <p>
-                <strong>
-                  La Caisse Régionale, responsable de traitement, recueille vos données personnelles pour traiter votre
-                  demande
-                </strong>
-                et, en particulier, pour vous délivrer une simulation ou un accord de principe de prêt (pouvant, le cas
-                échéant, aboutir à des traitements d'évaluation et de gestion du risque, de souscription et d'ouverture
-                de ce produit).
-              </p>
-              <p>
-                En outre, vous pourrez adhérer, si vous le souhaitez, au programme d'accompagnement de la Caisse
-                Régionale et ainsi recevoir par e-mail des informations commerciales relatives à votre projet. Ces
-                traitements sont réalisés à des fins de prospection commerciale. Les champs assortis d'un astérisque ou
-                mentionnés comme « obligatoire » doivent être complétés, si vous ne les renseignez pas, la Caisse
-                Régionale ne pourra pas traiter votre demande. Vous disposez de droits sur vos données personnelles dans
-                les conditions prévues par la réglementation (notamment un droit d'accès, de rectification,
-                d'effacement, d'opposition au traitement de vos données à tout moment dans le cadre de la prospection
-                commerciale, un droit à la limitation, ainsi qu'un droit de retirer votre consentement à tout moment,
-                sans porter atteinte à la licéité du traitement fondé sur le consentement effectué avant le retrait de
-                celui-ci). Retrouvez le détail des informations sur le traitement de vos données et sur l'exercice de
-                vos droits dans notre Politique de Protection des Données accessible
-                <a href="/">ici</a>.
-              </p>
-              <p>
-                Retrouvez nos mentions légales dans la rubrique « Mentions légales et CGU » du menu « Mes Paramètres »
-                depuis votre application Ma Banque ou en bas de page depuis notre site Internet.
-              </p>
-            </div>
-          </details>
-        </div>
-  
-        <div class="d-flex flex-row justify-content-end column-gap-2 mt-4">
-          <button type="reset" class="btn btn-outline-secondary" aria-label="Recommencer">
-            <i class="bi bi-x-lg" aria-hidden="true"></i>
-          </button>
-  
-          <button type="submit" class="btn btn-primary" aria-label="Soumettre">
-            <i class="bi bi-check-lg" aria-hidden="true"></i>
+
+        <div class="col-lg-3 col-sm-6">
+          <button
+            type="button"
+            class="btn btn-lg btn-outline-dark w-100 d-flex align-items-center column-gap-3"
+          >
+            <i class="bi bi-house-door"></i>
+            <span>Acheter un bien</span>
           </button>
         </div>
-      </form>
-    </main>
+
+        <div class="col-lg-3 col-sm-6">
+          <button
+            type="button"
+            class="btn btn-lg btn-outline-dark w-100 d-flex align-items-center column-gap-3"
+          >
+            <i class="bi bi-cone-striped"></i>
+            <span>Faire construire</span>
+          </button>
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+          <button
+            type="button"
+            class="btn btn-lg btn-outline-dark w-100 d-flex align-items-center column-gap-3"
+          >
+            <i class="bi bi-hammer"></i>
+            <span>Faire des travaux</span>
+          </button>
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+          <button
+            type="button"
+            class="btn btn-lg btn-outline-dark w-100 d-flex align-items-center column-gap-3"
+          >
+            <i class="bi bi-piggy-bank"></i>
+            <span>Rachat de crédit</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="button-inputs row g-4 mb-4">
+        <!-- Projet -->
+        <div class="col-md-12">
+          <label for="project" class="form-label">
+            Votre projet porte sur : *
+          </label>
+          <input type="hidden" name="project" />
+        </div>
+
+        <div class="col-lg-4 col-sm-12">
+          <button
+            type="button"
+            class="btn btn-lg btn-outline-dark w-100 d-flex align-items-center column-gap-2"
+          >
+            <i class="bi bi-house-heart"></i>
+            <span>Votre résidence principale</span>
+          </button>
+        </div>
+
+        <div class="col-lg-4 col-sm-12">
+          <button
+            type="button"
+            class="btn btn-lg btn-outline-dark w-100 d-flex align-items-center column-gap-2"
+          >
+            <i class="bi bi-signpost-split"></i>
+            <span>Votre résidence secondaire</span>
+          </button>
+        </div>
+
+        <div class="col-lg-4 col-sm-12">
+          <button
+            type="button"
+            class="btn btn-lg btn-outline-dark w-100 d-flex align-items-center column-gap-2"
+          >
+            <i class="bi bi-cash-coin"></i>
+            <span>Un investissement locatif</span>
+          </button>
+        </div>
+      </div>
+
+      <hr class="my-5" />
+
+      <strong class="d-block mb-3">Vous</strong>
+
+      <div class="row g-4 mb-4">
+        <!-- Civilité -->
+        <div class="col-md-2 mt-5">
+          <select class="form-select form-select-lg mt-2" required>
+            <option selected disabled>Civilité</option>
+            <option value="1">Homme</option>
+            <option value="2">Femme</option>
+            <option value="3">Autre</option>
+            <option value="4">Ne se prononce pas</option>
+          </select>
+        </div>
+
+        <!-- Nom -->
+        <div class="col-md-5">
+          <label for="name" class="form-label">Nom *</label>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="name"
+            required
+          />
+          <div class="invalid-feedback">Le champs est incorrect.</div>
+        </div>
+
+        <!-- Prénom -->
+        <div class="col-md-5">
+          <label for="name" class="form-label">Prénom *</label>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="name"
+            required
+          />
+          <div class="invalid-feedback">Le champs est incorrect.</div>
+        </div>
+      </div>
+
+      <strong class="d-block mb-3">Votre co-emprunteur</strong>
+
+      <div class="row g-4 mb-4">
+        <!-- Civilité -->
+        <div class="col-md-2 mt-5">
+          <select class="form-select form-select-lg mt-2" required>
+            <option selected disabled>Civilité</option>
+            <option value="1">Homme</option>
+            <option value="2">Femme</option>
+            <option value="3">Autre</option>
+            <option value="4">Ne se prononce pas</option>
+          </select>
+        </div>
+
+        <!-- Nom -->
+        <div class="col-md-5">
+          <label for="name" class="form-label">Nom</label>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="name"
+            required
+          />
+          <div class="invalid-feedback">Le champs est incorrect.</div>
+        </div>
+
+        <!-- Prénom -->
+        <div class="col-md-5">
+          <label for="name" class="form-label">Prénom</label>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="name"
+            required
+          />
+          <div class="invalid-feedback">Le champs est incorrect.</div>
+        </div>
+      </div>
+
+      <hr class="my-5" />
+
+      <strong class="d-block mb-3">Votre adresse</strong>
+
+      <div class="row g-4 mb-4">
+        <!-- Numéro -->
+        <div class="col-md-3">
+          <label for="number" class="form-label">Numéro dans la voie *</label>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="number"
+            required
+          />
+          <div class="invalid-feedback">Le champs est incorrect.</div>
+        </div>
+
+        <!-- Numéro -->
+        <div class="col-md-3">
+          <label for="street-type" class="form-label">Type de voie *</label>
+          <select class="form-select form-select-lg" id="street-type" required>
+            <option selected disabled></option>
+            <option value="1">Rue</option>
+            <option value="2">Allée</option>
+            <option value="3">Boulevard</option>
+            <option value="3">Sentier</option>
+            <option value="3">Avenue</option>
+          </select>
+          <div class="invalid-feedback">Le champs est incorrect.</div>
+        </div>
+
+        <!-- Rue -->
+        <div class="col-md-6">
+          <label for="street" class="form-label">Nom de la voie *</label>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="street"
+            required
+          />
+          <div class="invalid-feedback">Le champs est incorrect.</div>
+        </div>
+
+        <!-- Code postal -->
+        <div class="col-md-4 mt-0">
+          <label for="postcode" class="form-label">&nbsp;</label>
+          <input
+            type="text"
+            placeholder="Code postal *"
+            class="form-control form-control-lg"
+            id="postcode"
+            required
+          />
+          <div class="invalid-feedback">Le champs est incorrect.</div>
+        </div>
+
+        <!-- Ville -->
+        <div class="col-md-8 mt-0">
+          <label for="city" class="form-label">&nbsp;</label>
+          <input
+            type="text"
+            placeholder="Localité *"
+            class="form-control form-control-lg"
+            id="city"
+            required
+          />
+          <div class="invalid-feedback">Le champs est incorrect.</div>
+        </div>
+
+        <!-- Téléphone -->
+        <div class="col-md-6">
+          <label for="phone" class="form-label">Numéro de téléphone *</label>
+          <div class="input-group">
+            <span class="input-group-text">
+              <i class="bi bi-telephone-inbound-fill"></i>
+            </span>
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              id="phone"
+              required
+            />
+            <div class="invalid-feedback">Le champs est incorrect.</div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+          <label for="phone" class="form-label">Adresse email *</label>
+          <div class="input-group">
+            <span class="input-group-text">
+              <i class="bi bi-envelope-arrow-down"></i>
+            </span>
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              id="phone"
+              required
+            />
+            <div class="invalid-feedback">Le champs est incorrect.</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5" />
+
+      <strong class="d-block mb-3">Votre financement</strong>
+
+      <div class="row g-4 mb-4">
+        <!-- Prix achat -->
+        <div class="col-md-6">
+          <p>
+            Quel est le prix du bien, frais d'agence inclus ?
+            <small class="d-block text-secondary">
+              (Hors frais de notaire, ils seront calculés automatiquement.)
+            </small>
+          </p>
+
+          <div class="input-group">
+            <input
+              type="number"
+              class="form-control form-control-lg"
+              placeholder="Exemple: 165 000"
+              min="40000"
+              max="1000000"
+              step="1000"
+              required
+            />
+            <span class="input-group-text">€</span>
+            <div class="invalid-feedback">Le champs est incorrect.</div>
+          </div>
+        </div>
+
+        <!-- Prix travaux -->
+        <div class="col-md-6">
+          <p>
+            Quel est le montant des travaux envisagés
+            <small class="d-block text-secondary"> &nbsp; </small>
+          </p>
+
+          <div class="input-group">
+            <input
+              type="number"
+              class="form-control form-control-lg"
+              value="0"
+              min="0"
+              step="1000"
+              required
+            />
+            <span class="input-group-text">€</span>
+            <div class="invalid-feedback">Le champs est incorrect.</div>
+          </div>
+        </div>
+
+        <!-- Apport personnel -->
+        <div class="col-md-6">
+          <p>
+            Quel est le montant total de votre apport personnel ?
+            <small class="d-block text-secondary"> &nbsp; </small>
+          </p>
+
+          <div class="input-group">
+            <input
+              type="number"
+              class="form-control form-control-lg"
+              min="0"
+              step="1000"
+              required
+            />
+            <span class="input-group-text">€</span>
+            <div class="invalid-feedback">Le champs est incorrect.</div>
+          </div>
+        </div>
+
+        <!-- Mensualité souhaités -->
+        <div class="col-md-6">
+          <p>
+            Quelle est la mensualité envisagée ?
+            <small class="d-block text-secondary">
+              La durée du prêt sera calculée en fonction de cette donnée
+            </small>
+          </p>
+
+          <div class="input-group">
+            <input
+              type="number"
+              class="form-control form-control-lg"
+              min="300"
+              step="10"
+              required
+            />
+            <span class="input-group-text">€</span>
+            <div class="invalid-feedback">Le champs est incorrect.</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5" />
+
+      <div class="row mb-4">
+        <!-- CGV -->
+        <div class="col-md-12">
+          <div class="form-check">
+            <input
+              class="form-check-input border-dark"
+              type="checkbox"
+              style="scale: 0.65; cursor: pointer"
+              required
+            />
+            <span>
+              J'accepte sans réserve les conditions générales de vente
+              consultables <a href="#">ici</a>.
+            </span>
+            <div class="invalid-feedback">Vous devez accepter les CGV</div>
+          </div>
+        </div>
+
+        <!-- Partners -->
+        <div class="col-md-12">
+          <div class="form-check">
+            <input
+              class="form-check-input border-dark"
+              type="checkbox"
+              style="scale: 0.65; cursor: pointer"
+              checked
+            />
+            <span>
+              J'accepte de recevoir des offres commerciales de nos partenaires
+            </span>
+          </div>
+        </div>
+
+        <details class="d-block mt-4">
+          <summary>
+            Informations légales et protection de vos données personnelles
+          </summary>
+          <div class="mt-4">
+            <p>
+              <strong>
+                Les simulations qui peuvent être réalisées sur ce site ne
+                constituent pas des offres de prêts immobiliers.
+              </strong>
+            </p>
+            <p>
+              L'acceptation finale de votre demande de prêt reste soumise à
+              l'accord de votre Caisse régionale de Crédit Agricole, prêteur.
+            </p>
+            <p>
+              Si le prêt concerne l'acquisition ou la construction d'un
+              logement, une acquisition et des travaux simultanément ou des
+              travaux garantis par une hypothèque ou une sûreté comparable, le
+              prêt prend la forme d'un prêt immobilier. Vous disposez d'un délai
+              de réflexion de 10 jours pour accepter l'offre de prêt. La
+              réalisation de la vente est subordonnée à l'obtention du prêt. Si
+              celui-ci n'est pas obtenu, le vendeur doit vous rembourser les
+              sommes versées. Si le prêt n'est pas garanti par une hypothèque ou
+              une sûreté comparable et qu'il est destiné à financer uniquement
+              des travaux, le prêt prend la forme d'un prêt à la consommation.
+              Vous disposez d'un délai légal de rétractation de 14 jours
+              calendaires révolus.
+            </p>
+            <p>
+              <strong>
+                La Caisse Régionale, responsable de traitement, recueille vos
+                données personnelles pour traiter votre demande
+              </strong>
+              et, en particulier, pour vous délivrer une simulation ou un accord
+              de principe de prêt (pouvant, le cas échéant, aboutir à des
+              traitements d'évaluation et de gestion du risque, de souscription
+              et d'ouverture de ce produit).
+            </p>
+            <p>
+              En outre, vous pourrez adhérer, si vous le souhaitez, au programme
+              d'accompagnement de la Caisse Régionale et ainsi recevoir par
+              e-mail des informations commerciales relatives à votre projet. Ces
+              traitements sont réalisés à des fins de prospection commerciale.
+              Les champs assortis d'un astérisque ou mentionnés comme «
+              obligatoire » doivent être complétés, si vous ne les renseignez
+              pas, la Caisse Régionale ne pourra pas traiter votre demande. Vous
+              disposez de droits sur vos données personnelles dans les
+              conditions prévues par la réglementation (notamment un droit
+              d'accès, de rectification, d'effacement, d'opposition au
+              traitement de vos données à tout moment dans le cadre de la
+              prospection commerciale, un droit à la limitation, ainsi qu'un
+              droit de retirer votre consentement à tout moment, sans porter
+              atteinte à la licéité du traitement fondé sur le consentement
+              effectué avant le retrait de celui-ci). Retrouvez le détail des
+              informations sur le traitement de vos données et sur l'exercice de
+              vos droits dans notre Politique de Protection des Données
+              accessible
+              <a href="/">ici</a>.
+            </p>
+            <p>
+              Retrouvez nos mentions légales dans la rubrique « Mentions légales
+              et CGU » du menu « Mes Paramètres » depuis votre application Ma
+              Banque ou en bas de page depuis notre site Internet.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="d-flex flex-row justify-content-end column-gap-2 mt-4">
+        <button type="reset" class="btn btn-outline-secondary">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <button type="submit" class="btn btn-primary">
+          <i class="bi bi-check-lg"></i>
+        </button>
+      </div>
+    </form>
   </body>
 </html>
